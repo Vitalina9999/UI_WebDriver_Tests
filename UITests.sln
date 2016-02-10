@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITests.Core", "UITests.Core\UITests.Core.csproj", "{8A0C828C-DF56-455E-AFF9-02E9D3CCC392}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ParkingCalculator", "ParkingCalculator", "{942B0E40-C2DD-444E-9706-ED5AD4ACAF14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{907F3670-91C6-43D7-8B03-E2113F1B668E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculator.TestModel", "ParkingCalculator.TestModel\ParkingCalculator.TestModel.csproj", "{464FF05A-1DD6-4799-9C6E-E088BCC660FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculator.Tests", "ParkingCalculator.Tests\ParkingCalculator.Tests.csproj", "{81B8CB2B-54D2-4344-ACFB-7C10CC65B308}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A0C828C-DF56-455E-AFF9-02E9D3CCC392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A0C828C-DF56-455E-AFF9-02E9D3CCC392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A0C828C-DF56-455E-AFF9-02E9D3CCC392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A0C828C-DF56-455E-AFF9-02E9D3CCC392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{464FF05A-1DD6-4799-9C6E-E088BCC660FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464FF05A-1DD6-4799-9C6E-E088BCC660FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464FF05A-1DD6-4799-9C6E-E088BCC660FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464FF05A-1DD6-4799-9C6E-E088BCC660FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B8CB2B-54D2-4344-ACFB-7C10CC65B308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B8CB2B-54D2-4344-ACFB-7C10CC65B308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B8CB2B-54D2-4344-ACFB-7C10CC65B308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B8CB2B-54D2-4344-ACFB-7C10CC65B308}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A0C828C-DF56-455E-AFF9-02E9D3CCC392} = {907F3670-91C6-43D7-8B03-E2113F1B668E}
+		{464FF05A-1DD6-4799-9C6E-E088BCC660FF} = {942B0E40-C2DD-444E-9706-ED5AD4ACAF14}
+		{81B8CB2B-54D2-4344-ACFB-7C10CC65B308} = {942B0E40-C2DD-444E-9706-ED5AD4ACAF14}
+	EndGlobalSection
+EndGlobal
