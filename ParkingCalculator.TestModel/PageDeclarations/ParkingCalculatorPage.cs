@@ -44,6 +44,7 @@ namespace ParkingCalculator.TestModel.PageDeclarations
         [FindsBy(How = How.Name, Using = "Submit")]
         public IWebElement BtnCalculate { get; set; }
 
+ 
         public CalendarWindow EntryCalendarWindow
         {
             get

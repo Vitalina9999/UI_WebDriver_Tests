@@ -6,6 +6,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using UITests.Core.WebDriver;
 
 namespace ParkingCalculator.TestModel.PageDeclarations
@@ -72,5 +73,10 @@ namespace ParkingCalculator.TestModel.PageDeclarations
                 }
             }
         }
+
+        //[FindsBy(How = How.XPath, Using = "/html/body/form/table/tbody/tr[1]/td/table/tbody/tr/td[2]/a[2]")]
+      //  public IWebElement BtnNextYear { get; set; }
+
+      
     }
 }
