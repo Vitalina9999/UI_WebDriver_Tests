@@ -77,11 +77,11 @@ namespace ParkingCalculator.Tests.Sanity
 
             int dayNow = DateTime.Now.Day;
 
-            string dateTimeOfNextYear = mouthNow + "/" + dayNow + "/" + backYear;
+            string dateTimeOfBackYear = mouthNow + "/" + dayNow + "/" + backYear;
 
 
             //ASSERT
-            Assert.AreEqual(valueTextOfBackYearBtn, dateTimeOfNextYear);
+            Assert.AreEqual(valueTextOfBackYearBtn, dateTimeOfBackYear);
         }
         
     }
