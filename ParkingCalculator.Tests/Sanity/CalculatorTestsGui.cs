@@ -83,6 +83,27 @@ namespace ParkingCalculator.Tests.Sanity
             //ASSERT
             Assert.AreEqual(valueTextOfBackYearBtn, dateTimeOfBackYear);
         }
+
+        [TestMethod]
+        public void ValidationCostTest()
+        {
+            //ARRANGE
+            ParkingCalculatorPage parkingCalculatorPage = new ParkingCalculatorPage();
+            parkingCalculatorPage.Invoke();
+
+            //ACT
+            parkingCalculatorPage.DdlChooseALot.SelectByText("Short-Term Parking");
+            ReadOnlyCollection<IWebElement> validationCostText = parkingCalculatorPage.Driver.FindElements(By.ClassName("SubHead"));
+
+            IWebElement calculateBtn = parkingCalculatorPage.Driver.FindElement(By.Name("Submit"));
+            calculateBtn.Click();
+
+            IWebElement validation = parkingCalculatorPage.Driver.FindElement(By.TagName("b"));
+            string validationText = validation.Text;
+
+            //ASSERT
+           //?? Assert.IsTrue(validationText);  
+        }
         
     }
 }
