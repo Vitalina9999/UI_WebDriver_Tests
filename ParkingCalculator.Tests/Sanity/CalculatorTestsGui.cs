@@ -36,14 +36,52 @@ namespace ParkingCalculator.Tests.Sanity
             
             parkingCalculatorPage.EntryCalendarWindow.ClickByDay(DateTime.Now.Day);
 
-            string valueText = parkingCalculatorPage.EntryDateInput.GetAttribute("value");
+            string valueTextOfNextYearBtn = parkingCalculatorPage.EntryDateInput.GetAttribute("value");
 
-            int daysInMonth = DateTime.DaysInMonth(DateTime.Now.Year+1, DateTime.Now.Month);
+            int nextYear = DateTime.Now.Year + 1;
 
-           
+            int mouthNow = DateTime.Now.Month;
+
+            int dayNow = DateTime.Now.Day;
+
+            string dateTimeOfNextYear = mouthNow + "/" + dayNow + "/" + nextYear;
+
+
             //ASSERT
-            // Assert.AreEqual(expectedPrice, priceActual);
+            Assert.AreEqual(valueTextOfNextYearBtn, dateTimeOfNextYear);
 
+        }
+
+        [TestMethod]
+        public void ChooseBackYearTest()
+        {
+            //ARRANGE
+            ParkingCalculatorPage parkingCalculatorPage = new ParkingCalculatorPage();
+            parkingCalculatorPage.Invoke();
+
+            //ACT
+            parkingCalculatorPage.DdlChooseALot.SelectByText("Short-Term Parking");
+
+            parkingCalculatorPage.BtnEntryDateTimeCalendar.Click();
+
+            IWebElement backYearBtn = parkingCalculatorPage.EntryCalendarWindow.WrappedDriver.FindElement(By.XPath("/html/body/form/table/tbody/tr[1]/td/table/tbody/tr/td[2]/a[1]"));
+            backYearBtn.Click();
+
+            parkingCalculatorPage.EntryCalendarWindow.ClickByDay(DateTime.Now.Day);
+
+            string valueTextOfBackYearBtn = parkingCalculatorPage.EntryDateInput.GetAttribute("value");
+
+            int backYear = DateTime.Now.Year - 1;
+
+            int mouthNow = DateTime.Now.Month;
+
+            int dayNow = DateTime.Now.Day;
+
+            string dateTimeOfNextYear = mouthNow + "/" + dayNow + "/" + backYear;
+
+
+            //ASSERT
+            Assert.AreEqual(valueTextOfBackYearBtn, dateTimeOfNextYear);
         }
         
     }
